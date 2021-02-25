@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_grafikleri"
+    app:startDestination="@id/ilkfragman">
+
+    <fragment
+        android:id="@+id/ikincifragman"
+        android:name="com.murataliavcu.navigation.ikincifragman"
+        android:label="fragment_ikincifragman"
+        tools:layout="@layout/fragment_ikincifragman" >
+        <action
+            android:id="@+id/action_ikincifragman_to_ilkfragman"
+            app:destination="@id/ilkfragman" />
+        <argument
+            android:name="kullanıcı_adı"
+            app:argType="string"
+            android:defaultValue="*girilmedi*" />
+    </fragment>
+    <fragment
+        android:id="@+id/ilkfragman"
+        android:name="com.murataliavcu.navigation.ilkfragman"
+        android:label="fragment_ilkfragman"
+        tools:layout="@layout/fragment_ilkfragman" >
+        <action
+            android:id="@+id/action_ilkfragman_to_ikincifragman"
+            app:destination="@id/ikincifragman" />
+        <action
+            android:id="@+id/action_ilkfragman_to_ikincifragman2"
+            app:destination="@id/ikincifragman" />
+    </fragment>
+</navigation>
